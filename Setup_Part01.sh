@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade
 sudo apt install vlc -y
 sudo apt install python3 -y
-sudo apt install python-pip -y
+sudo apt install python3-pip -y
 mkdir temp
 wget https://raw.githubusercontent.com/videolan/vlc/master/share/lua/playlist/youtube.lua -P temp
 if[[$ExcpectedLocation == $LocationOnSystem]] then
