@@ -8,7 +8,7 @@ sudo apt install python3 -y
 sudo apt install python-pip -y
 mkdir temp
 wget https://raw.githubusercontent.com/videolan/vlc/master/share/lua/playlist/youtube.lua -P temp
-if[[$ExcpectedLocation == $LocationOnSystem]]; then
+if[[$ExcpectedLocation == $LocationOnSystem]] then
 	sudo rm /usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.luac
 	sudo cp temp/youtube.lua /usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.lua
 else
