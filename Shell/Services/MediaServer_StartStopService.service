@@ -1,0 +1,13 @@
+[Unit]
+Description=VLCMediaServer
+After=local-fs.target network.target
+[Service]
+WorkingDirectory=/mnt/VLCMediaController
+Type=Forking
+
+ExecStart=/usr/bin/screen -h 1024 -dmS VLCMediaServer /mnt/VLCMediaController/LaunchScripts/LaunchMediaServer.sh
+
+ExecStop=/usr/bin/screen -p 0 -S VLCMediaServer -X eval 'stuff \"stop\"\015'
+
+[Install]
+WantedBy=multi-user.target

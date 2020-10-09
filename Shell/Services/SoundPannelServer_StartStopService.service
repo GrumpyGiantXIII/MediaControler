@@ -1,0 +1,13 @@
+[Unit]
+Description=VLCSoundPannelServer
+After=local-fs.target network.target
+[Service]
+WorkingDirectory=/
+Type=Forking
+
+ExecStart=/usr/bin/screen -h 1024 -dmS VLCSoundPannelServer /VLCMedia/LaunchSoundPannelServer.sh
+
+ExecStop=/usr/bin/screen -p 0 -S VLCSoundPannelServer -X eval 'stuff \"stop\"\015'
+
+[Install]
+WantedBy=multi-user.target

@@ -1,3 +1,4 @@
+#!/bin/sh
 ExcpectedLocation="/usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.luac"
 LocationOnSystem=$(dpkg -L vlc-plugin-base | grep youtube.lua)
 
