@@ -3,6 +3,7 @@ LocationOnSystem=$(dpkg -L vlc-plugin-base | grep youtube.lua)
 
 sudo apt update
 sudo apt upgrade
+sudo apt install screen -y
 sudo apt install alsa-utils -y
 sudo apt install vlc -y
 sudo apt install python3 -y
