@@ -18,6 +18,7 @@ else
 fi
 
 sudo systemctl set-default multi-user
+sudo rm -r ~/temp/
 echo "Rebooting in 10 second's to cance cance script and reboot manualy"
 echo "After reboot start script 2"
 sleep 10
