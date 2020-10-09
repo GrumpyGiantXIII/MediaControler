@@ -17,8 +17,8 @@ else
 fi
 
 sudo systemctl set-default multi-user
-echo "rebooting in 30 second's to cance cance script and reboot manualy"
-echo "after reboot start script 2"
+echo "Rebooting in 30 second's to cance cance script and reboot manualy"
+echo "After reboot start script 2"
 sleep 30
 sudo reboot
 
