@@ -9,4 +9,4 @@ sudo cp Shell/Services/MediaServer_StartStopService.service /etc/systemd/system/
 sudo cp Shell/Services/SoundPannelServer_StartStopService.service /etc/systemd/system/SoundPannelServer_StartStopService.service
 sudo systemctl enable MediaServer_StartStopService.service 
 sudo systemctl enable SoundPannelServer_StartStopService.service
-sudo systemctl daemen-reload
+sudo systemctl daemon-reload
