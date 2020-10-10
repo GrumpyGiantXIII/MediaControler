@@ -33,7 +33,7 @@ sudo chmod 0755 /mnt/VLCMediaController/LaunchScripts/LaunchSoundPannelServer.sh
 sudo cp Shell/PulseAudio_Config/client.conf /etc/pulse/client.conf
 
 sudo adduser ragnarok pulse-access
-sudo adduser root pulse-acces
+sudo adduser root pulse-access
 
 sudo cp Shell/Services/PulseAudio.service /etc/systemd/system/PulseAudio.service
 sudo cp Shell/Services/MediaServer_StartStopService.service /etc/systemd/system/MediaServer_StartStopService.service

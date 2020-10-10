@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=notify
-Exec=/usr/bin/pulseaudio --daemonize=no --system --realtime --log-target=journal
+ExecStart=/usr/bin/pulseaudio --daemonize=no --system --realtime --log-target=journal
 
 [Install]
 WantedBy=multi-user.target
