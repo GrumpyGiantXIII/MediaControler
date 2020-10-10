@@ -10,7 +10,5 @@ RestartSec=3
 
 ExecStart=/usr/bin/screen -h 1024 -DmS VLCMediaServer /mnt/VLCMediaController/LaunchScripts/LaunchMediaServer.sh
 
-
-
 [Install]
 WantedBy=multi-user.target
