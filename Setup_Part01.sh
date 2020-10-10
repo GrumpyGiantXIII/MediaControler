@@ -30,15 +30,22 @@ sudo cp Shell/LaunchScripts/LaunchSoundPannelServer.sh /mnt/VLCMediaController/L
 sudo chmod 0755 /mnt/VLCMediaController/LaunchScripts/LaunchMediaServer.sh
 sudo chmod 0755 /mnt/VLCMediaController/LaunchScripts/LaunchSoundPannelServer.sh
 
+sudo cp Shell/PulseAudio_Config/client.conf /etc/pulse/client.conf
+
+sudo adduser ragnarok pulse-acces
+sudo adduser root pulse-acces
+
+sudo cp Shell/Services/PulseAudio.service /etc/systemd/system/PulseAudio.service
 sudo cp Shell/Services/MediaServer_StartStopService.service /etc/systemd/system/MediaServer_StartStopService.service
-sudo cp Shell/Services/SoundPannelServer_StartStopService.service /etc/systemd/system/SoundPannelServer_StartStopService.service
+sudo cp Shell/Services/SoundP
+annelServer_StartStopService.service /etc/systemd/system/SoundPannelServer_StartStopService.service
+sudo systemctl enable PulseAudi.service
 sudo systemctl enable MediaServer_StartStopService.service
 sudo systemctl enable SoundPannelServer_StartStopService.service
 sudo systemctl daemon-reload
 
 
 echo "Rebooting in 10 second's to cance cance script and reboot manualy"
-echo "After reboot start script 2"
 sleep 10
 sudo reboot
 
