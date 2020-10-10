@@ -6,7 +6,7 @@ sudo apt install alsa-utils -y
 sudo apt install vlc -y 
 sudo apt install python3 -y
 sudo apt install python3-pip -y
-sudo apt install dpkg-query -y
+sudo apt install dpkg -y
 
 ExcpectedLocation="/usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.luac"
 LocationOnSystem=$(dpkg -L vlc-plugin-base | grep youtube.lua)
