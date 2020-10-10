@@ -14,12 +14,10 @@ LocationOnSystem=$(dpkg -L vlc-plugin-base | grep youtube.lua)
 mkdir ~/temp
 wget https://raw.githubusercontent.com/videolan/vlc/master/share/lua/playlist/youtube.lua -P ~/temp
 
-if [ "$ExcpectedLocation" == "$LocationOnSystem" ]; then
-	sudo rm "$ExcpectedLocation"
-	sudo cp ~/temp/youtube.lua /usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.lua
-else
-	echo "Error cant continue unexpected location for youtube.lua"
-fi
+
+sudo rm "$LocationOnSystem"
+sudo cp ~/temp/youtube.lua "$LocationOnSystem"
+
 
 sudo systemctl set-default multi-user
 sudo rm -r ~/temp/
