@@ -1,6 +1,6 @@
 [Unit]
 Description=VLCMediaServer
-After=network.target
+After=network.target pulseaudio-enable-autospawn.service
 
 [Service]
 User=ragnarok
