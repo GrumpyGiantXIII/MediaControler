@@ -1,6 +1,6 @@
 [Unit]
 Description=VLCSoundPannelServer
-After=network.target
+After=network.target pulseaudio-enable-autospawn.service MediaServer_StartStopService.service
 
 [Service]
 User=ragnarok
