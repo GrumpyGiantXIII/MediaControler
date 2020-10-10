@@ -1,1 +1,1 @@
-sudo rm -r /mnt/
+sudo rm -r /mnt/*
