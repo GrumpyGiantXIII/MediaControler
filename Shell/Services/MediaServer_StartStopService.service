@@ -3,6 +3,7 @@ Description=VLCMediaServer
 After=network.target
 
 [Service]
+User=ragnarok
 Type=Forking
 Restart=on-failure
 RestartSec=3
