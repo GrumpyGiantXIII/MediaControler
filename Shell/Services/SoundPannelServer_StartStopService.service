@@ -2,10 +2,10 @@
 Description=VLCSoundPannelServer
 After=local-fs.target network.target
 [Service]
-WorkingDirectory=/
 Type=Forking
-
-ExecStart=/usr/bin/screen -h 1024 -dmS VLCSoundPannelServer /VLCMedia/LaunchSoundPannelServer.sh
+Restart=on-failure
+RestartSec=3
+ExecStart=/usr/bin/screen -h 1024 -DmS VLCSoundPannelServer ./VLCMedia/LaunchSoundPannelServer.sh
 
 
 

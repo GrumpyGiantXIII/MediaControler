@@ -1,11 +1,13 @@
 [Unit]
 Description=VLCMediaServer
-After=local-fs.target network.target
-[Service]
-WorkingDirectory=/mnt/VLCMediaController
-Type=Forking
+After=network.target
 
-ExecStart=/usr/bin/screen -h 1024 -dmS VLCMediaServer /mnt/VLCMediaController/LaunchScripts/LaunchMediaServer.sh
+[Service]
+Type=Forking
+Restart=on-failure
+RestartSec=3
+
+ExecStart=/usr/bin/screen -h 1024 -DmS VLCMediaServer /mnt/VLCMediaController/LaunchScripts/LaunchMediaServer.sh
 
 
 
